@@ -10,6 +10,15 @@
 </head>
 <body>
   <div id="timer">????</div>
+  <!-- 進度條和爆炸圖示：放在 #timer 後面 -->
+  <div id="timer-bar-container" style="width:80%;margin:24px auto 0 auto;">
+    <div id="timer-bar-bg" style="background:#333;width:100%;height:24px;border-radius:8px;overflow:hidden;">
+      <div id="timer-bar" style="height:24px;width:100%;background:#4caf50;transition:width 0.2s, background 0.2s;"></div>
+    </div>
+  </div>
+  <!-- 炸彈圖示（隱藏，等時間到才顯示） -->
+  <div id="explosion" style="display:none;font-size:3rem;text-align:center; margin-top:16px;">💥</div>
+  
   <a class="btn btn-info fbtn" id="min60" onclick="adjust(-60)">-60</a>
   <a class="btn btn-info fbtn" id="min10" onclick="adjust(-10)">-10</a>
   <a class="btn btn-primary" id="toggle" onclick="toggle()">RUN</a>
