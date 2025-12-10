@@ -9,30 +9,33 @@
   <script type="text/javascript" src="index.js"></script>
   <style>
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
       background: #222;
+      height: 100vh;
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     #center-area {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-bottom: 40px;
     }
     #timer {
-      font-size: 2.5rem;  /* 原本很大，這邊縮小一點 */
+      font-size: 2.5rem;
       color: #fff;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       text-align: center;
       min-width: 120px;
+      font-weight: 600;
+      letter-spacing: 2px;
     }
     #timer-bar-container {
       width: 340px;
-      margin: 0 auto;
+      margin: 0 auto 40px auto; /* 下方預留 40px 空間避免與爆炸 icon 重疊 */
     }
     #timer-bar-bg {
       background: #333;
@@ -51,23 +54,23 @@
       display: none;
       font-size: 3rem;
       text-align: center;
-      margin-top: 16px;
+      margin-top: 0px;
+      margin-bottom: 24px;
     }
-    /* 按鈕區域 */
     .btn-area {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px 10px;
+      gap: 8px 12px;
       justify-content: center;
-      margin-top: 20px;
-      margin-bottom: 16px;
+      margin-top: 32px;
+      margin-bottom: 8px;
+      width: 95%;
     }
-    /* 若其他頁面有大字，請不要用 resize() 再把 #timer 字型強制拉大 */
   </style>
 </head>
 <body>
   <div id="center-area">
-    <div id="timer">????</div>
+    <div id="timer">60</div>
     <div id="timer-bar-container">
       <div id="timer-bar-bg">
         <div id="timer-bar"></div>
